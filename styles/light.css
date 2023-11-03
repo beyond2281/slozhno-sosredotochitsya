@@ -28,7 +28,7 @@
     }
 
     .page {
-      background-color: var(--main-bg-fone, #000028);
+      background-color: var(--main-bg-fone, #FFF1F7);
     }
 
     .header__decorative-element {

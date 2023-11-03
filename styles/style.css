@@ -8,6 +8,7 @@
   background-size: cover;
   background-attachment: fixed;
   inline-size: 100%;
+  min-height: 688px;
 }
 
 .header {
@@ -252,6 +253,7 @@
   align-items: center;
   padding: 10px;
   block-size: 100vh;
+  min-height: 688px;
 }
 
 .footer__text {
