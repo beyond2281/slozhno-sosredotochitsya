@@ -28,14 +28,14 @@
     }
 
     .page {
-      background-color: var(--main-bg-fone);
+      background-color: var(--main-bg-fone, #000028);
     }
 
     .header__decorative-element {
         display: none;
     }
   }
-
+  
   .theme_light .header__theme-menu-button:hover {
     border: 1px solid rgba(50, 49, 45, 0.40);
   }
@@ -45,9 +45,9 @@
   }
 
   .theme_light .header__theme-menu-button:focus-visible {
-    border-bottom: 1px solid var(--accent-color);
+    border-bottom: 1px solid var(--accent-color, #353430);
   }
 
   .theme_light .description-link {
-    text-shadow: 2px 1px 0 var(--text-shadow-color-size);
+    text-shadow: 2px 1px 0 var(--text-shadow-color-size, #FF8DCB);
   }
