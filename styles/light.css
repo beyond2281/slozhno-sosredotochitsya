@@ -15,7 +15,7 @@
   }
 
   @media (prefers-color-scheme: light) {
-  :root {
+    :root {
       --bg-image-header: url("../images/cover-image-light.png");
       --main-bg-color: #353430;
       --main-text-color: #353430;
@@ -24,16 +24,16 @@
       --focus-color: #FFC2E6;
       --text-shadow-color: #FF0070;
       --text-shadow-color-size: #FF8DCB;
-      --bg-color-dekor: #FF8DCB; 
-  }
+      --bg-color-dekor: #FF8DCB;
+    }
 
-      .page {
-        background-color: var(--main-bg-fone);
-      }
+    .page {
+      background-color: var(--main-bg-fone);
+    }
 
-      .header__decorative-element {
+    .header__decorative-element {
         display: none;
-      }
+    }
   }
 
   .theme_light .header__theme-menu-button:hover {
