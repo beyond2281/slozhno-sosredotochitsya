@@ -1,6 +1,7 @@
 :root.theme-dark {
   --bg-image-header: url("../images/cover-image-dark.png");
   --main-bg-color: #000028;
+  --main-bg-fone: #000028;
   --main-text-color: #F1B2CE;
   --accent-color: #FF0070;
   --focus-color: #DB00FF;
@@ -21,6 +22,7 @@
   */
   --bg-image-header: url("../images/cover-image-dark.png");
   --main-bg-color: #000028;
+  --main-bg-fone: #000028;
   --main-text-color: #F1B2CE;
   --accent-color: #FF0070;
   --focus-color: #DB00FF;
@@ -31,19 +33,6 @@
 .theme_dark .header__decorative-element {
   display: grid;
 }
-
-@media (prefers-color-scheme: light) {
-  :root {
-  --bg-image-header: url("../images/cover-image-dark.png");
-  --main-bg-color: #000028;
-  --main-text-color: #F1B2CE;
-  --accent-color: #FF0070;
-  --focus-color: #DB00FF;
-  --text-shadow-color: #FF0070;
-  --bg-color-dekor: #FF0070;
-  }
-}
-
 
 .theme_auto .header__theme-menu-button:hover {
   border: 1px solid rgba(50, 49, 45, 0.40);
