@@ -3,10 +3,61 @@
   Здесь окажутся стили, которые нужно переопределить принудительно,
   переключая тему
 */
+:root.theme-light {
+  --bg-image-header: url("../images/cover-image-light.png");
+  --main-bg-color: #353430;
+  --main-text-color: #353430;
+  --accent-color: #353430;
+  --focus-color: #FFC2E6;
+  --text-shadow-color: #FF0070;
+  --text-shadow-color-size: #FF8DCB;
+  --bg-color-dekor: #FF8DCB;
+}
 
 .page.theme_light {
-  /* сохраните этот селектор в приведённом виде.
+/* сохраните этот селектор в приведённом виде.
     Так стили написанные ниже будут иметь больший вес,
     чем стили в медиазапросе предпочтений пользователя
   */
-}
+  --bg-image-header: url("../images/cover-image-light.png");
+  --main-bg-color: #353430;
+  --main-text-color: #353430;
+  --accent-color: #353430;
+  --focus-color: #FFC2E6;
+  --text-shadow-color: #FF0070;
+  --text-shadow-color-size: #FF8DCB;
+  --bg-color-dekor: #FF8DCB;
+  }
+
+  @media (prefers-color-scheme: light) {
+    :root {
+      --bg-image-header: url("../images/cover-image-light.png");
+      --main-bg-color: #353430;
+      --main-text-color: #353430;
+      --accent-color: #353430;
+      --focus-color: #FFC2E6;
+      --text-shadow-color: #FF0070;
+      --text-shadow-color-size: #FF8DCB;
+      --bg-color-dekor: #FF8DCB; 
+      }
+
+      .header__decorative-element {
+        display: none;
+      }
+  }
+
+  .theme_light .header__theme-menu-button:hover {
+    border: 1px solid rgba(50, 49, 45, 0.40);
+  }
+
+  .theme_light .header__decorative-element {
+    display: none;
+  }
+
+  .theme_light .header__theme-menu-button:focus-visible {
+    border-bottom: 1px solid var(--accent-color);
+  }
+
+  .theme_light .description-link {
+    text-shadow: 2px 1px 0 var(--text-shadow-color-size);
+  }

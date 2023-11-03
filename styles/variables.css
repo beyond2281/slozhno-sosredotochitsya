@@ -3,7 +3,6 @@
   и их переопределение под различные устройства
 */
 :root {
-  --main-fonts: 'IBM Plex mono';
   --main-font-size: 18px;
   --focus-font-size: 116px;
   --bg-image-header: url("../images/cover-image-dark.png");
@@ -11,10 +10,9 @@
   --main-text-color: #F1B2CE;
   --accent-color: #FF0070;
   --focus-color: #DB00FF;
-  --accent-text-color: #000028;
-  --main-section-padding: 40px 10px;
-  --margin-section: 50px;
-  --margin-paragraph: 10px;
+  --text-shadow-color: #FF0070;
+  --shadow-link: #FF8DCB;
+  --bg-color-dekor: #FF0070;
   --header-font-weight: 700;
   --font-weight-normal: 400;
 }

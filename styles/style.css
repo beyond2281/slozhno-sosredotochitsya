@@ -8,7 +8,7 @@
   background-attachment: fixed;
   background-size: cover;
   inline-size: 100%;
-  margin: 0;
+  margin: 0 auto;
 }
 
 .header {
@@ -53,7 +53,6 @@
   width: 9px;
   height: 9px;
   box-shadow: 0px 0px 4px 3px;
-
   background-color: var(--accent-color);
   display: inline-block;
   border-radius: 50%;
@@ -61,14 +60,12 @@
   left: 42px;
 }
 
-
-
 .header__decorative-element {
   position: absolute;
   top: 10px;
   right: 10px;
   color: var(--accent-color);
-  font-family: var(--main-fonts);
+  font-family: 'IBM Plex mono', sans-serif;
   font-size: var(--main-font-size);
   font-style: normal;
   font-weight: var(--font-weight-normal);
@@ -82,7 +79,7 @@
 
 .header__theme-menu {
   color: var(--accent-color);
-  font-family: var(--main-fonts);
+  font-family: 'IBM Plex mono', sans-serif;
   font-size: var(--main-font-size);
   font-style: normal;
   font-weight: var(--font-weight-normal);
@@ -101,34 +98,49 @@
   background-color: transparent;
   color: var(--accent-color);
   text-align: center;
-  font-family: var(--main-fonts);
+  font-family: 'IBM Plex mono', sans-serif;
   font-size: var(--main-font-size);
   font-style: normal;
   font-weight: var(--font-weight-normal);
   line-height: 18px;
+  border: 1px solid transparent;
 }
 
 .header__theme-menu-button_active {
-  border: 1px solid var(--accent-color);
+  border-color: var(--accent-color);
+  pointer-events: none
+}
+
+.header__theme-menu-button:hover {
+  cursor: pointer;
+  border: 1px solid rgba(255, 0, 112, 0.40);
+}
+
+.header__theme-menu-button:focus {
+  outline: none;
+}
+
+.header__theme-menu-button:focus-visible {
+  border-bottom: 1px solid var(--accent-color);
 }
 
 .header__title {
   color: var(--focus-color);
-  text-shadow: 4px 4px 0px var(--accent-color);
-  font-family: var(--main-fonts);
-  font-size: clamp(7.25rem, 4.1799rem + 13.099vw, 9.8125rem);
+  text-shadow: 4px 4px 0px var(--text-shadow-color);
+  font-family: 'IBM Plex mono', sans-serif;
+  font-size: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem);
   font-style: normal;
   font-weight: var(--header-font-weight);
   line-height: 95.7px;
 }
 
 .title-decor {
-  background-color: var(--accent-color);
+  background-color: var(--bg-color-dekor);
 }
 
 .description-text {
-  color: var(--accent-text-color);
-  font-family: var(--main-fonts);
+  color: var(--main-bg-color);
+  font-family: 'IBM Plex mono', sans-serif;
   font-size: var(--main-font-size);
   font-style: normal;
   font-weight: var(--header-font-weight);
@@ -139,7 +151,7 @@
   margin-block-start: 50px;
   margin-block-end: 20px;
   color: var(--accent-color);
-  font-family: var(--main-fonts);
+  font-family: 'IBM Plex mono', sans-serif;
   font-size: var(--main-font-size);
   font-style: normal;
   font-weight: var(--header-font-weight);
@@ -162,7 +174,7 @@
 
 .block-title {
   color: var(--main-bg-color);
-  font-family: var(--main-fonts);
+  font-family: 'IBM Plex mono', sans-serif;
   font-size: var(--main-font-size);
   font-style: normal;
   font-weight: var(--header-font-weight);
@@ -172,7 +184,7 @@
 
 .block-description {
   color: var(--main-text-color) ;
-  font-family: var(--main-fonts);
+  font-family: 'IBM Plex mono', sans-serif;
   font-size: var(--main-font-size);
   font-style: normal;
   font-weight: 400;
@@ -181,19 +193,29 @@
 
 .description-link {
   text-decoration: none;
-  font-family: var(--main-fonts);
+  font-family: 'IBM Plex mono', sans-serif;
   font-size: var(--main-font-size);
   font-style: normal;
   font-weight: var(--font-weight-normal);
   line-height: normal;
-  text-shadow: 2px 1px 0 var(--accent-color);
+  text-shadow: 2px 1px 0 var(--text-shadow-color);
+  border: 1px solid transparent;
+}
+.description-link:hover {
+  border-bottom: 1px solid var(--main-text-color);
 }
 
+.description-link:focus {
+  outline: none;
+}
+
+.description-link:focus-visible {
+  border-color: var(--main-text-color);
+}
 
 .block-title-font-normal {
-  background-color: var(--accent-color);
   color: var(--main-bg-color);
-  font-family: var(--main-fonts);
+  font-family: 'IBM Plex mono', sans-serif;
   font-size: var(--main-font-size);
   font-style: normal;
   font-weight: 400;
@@ -231,16 +253,184 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  position: relative;
 }
 
 .footer__text {
   color: var(--focus-color);
-  text-shadow: 2px 2px 0px var(--accent-color);
-  font-family: var(--main-fonts);
-  font-size: clamp(7.25rem, 4.1799rem + 13.099vw, 9.8125rem);
+  text-shadow: 2px 2px 0px var(--text-shadow-color);
+  font-family: 'IBM Plex mono', sans-serif;
+  font-size: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem);
   font-style: normal;
   font-weight: var(--header-font-weight);
   line-height: 95.7px;
 }
 
 /* Далее → медиазапросы на планшет и десктоп */
+
+
+@media (width < 768px) {
+  .header__title {
+    text-shadow: 4px 4px 0px var(--text-shadow-color-size);
+  } 
+
+  .footer__text {
+    text-shadow: 4px 4px 0px var(--text-shadow-color-size)
+  }
+}
+
+@media (width >= 768px) {
+  .header {
+    padding: 20px;
+  }
+
+  .decorated-zone::before {
+    top: 20px;
+    right: 20px;
+  }
+
+  .decorated-zone::after {
+    bottom: 20px;
+    left: 20px;
+  }
+
+  .header__decorative-element::after {
+    left: 42px;
+  }
+
+  .header__decorative-element {
+    top: 20px;
+    right: 10px;
+    margin-inline-end: 38px;
+  }
+
+  .header__title {
+    font-size: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem);
+    line-height: 99px;
+    margin-left: -20px;
+  }
+
+  .header__description {
+    max-width: 364px;
+    justify-self: end;
+  }
+
+  .main {
+    padding: 0 20px;
+  }
+
+  .main__title {
+    margin: 0;
+    margin-bottom: 20px;
+    max-width: 236px;
+  }
+
+  .main__section-concentrate .main__title:first-child {
+    margin: 0;
+  }
+
+
+  .main__section-concentrate {
+    display: grid;
+    grid-template-columns: fit-content(236px) 1fr;
+    gap: 20px;
+    margin-top: 60px;
+    margin-bottom: 80px;
+  }
+
+  .main__section-concentrate-reasons {
+    margin-bottom: 80px;
+  }
+
+  .main__section-concentrate-adviсe {
+    display: grid;
+    grid-template-columns: fit-content(236px) 1fr;
+    gap: 20px;
+  }
+
+  .main__section-foto {
+    padding: 80px 20px 60px 20px;
+  }
+
+  .main__section-foto-list {
+    margin-top: 20px;
+    display: grid;
+    gap: 20px;
+    grid-template-columns: repeat(3, auto);
+    grid-template-rows: repeat(3, auto);
+  }
+
+  .foto-sunset {
+    grid-column: 1 /3;
+    grid-row: 1 / 2;
+  }
+
+  .foto-sweets {
+    grid-column: 3 / 4;
+    grid-row: 1 / 3;
+  }
+
+  .foto-cassette {
+    grid-column: 1 / 2;
+    grid-row: 2 / 4;
+  }
+
+  .foto-books {
+    grid-column: 2 / 3;
+    grid-row: 2 / 3;
+  }
+
+  .foto-street {
+    grid-column: 2 / 4;
+    grid-row: 3 / 4;
+  }
+
+  .footer {
+    padding: 20px;
+  }
+
+  .footer__text {
+    font-size: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem);
+    line-height: 99px;
+  }
+  
+}
+
+@media (width >= 1024px) {
+
+  .header {
+    align-items: start;
+  }
+
+  .header__title {
+    font-size: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem);
+    line-height: 129.525px;
+  }
+
+  .header__theme-menu-list {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+  }
+
+  .header__description {
+    align-self: center;
+    min-width: 491px;
+  }
+
+  .main__title {
+    min-width: 314px;
+  }
+
+  .main__section-concentrate-reasons {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .footer__text {
+    font-size: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem);
+    line-height: 129.525px;
+  }
+}
+
+
