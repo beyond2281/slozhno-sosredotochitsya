@@ -3,7 +3,7 @@
   Здесь окажутся стили, которые нужно переопределить принудительно,
   переключая тему
 */
-:root.theme-light {
+/* :root.theme-light {
   --bg-image-header: url("../images/cover-image-light.png");
   --main-bg-color: #353430;
   --main-bg-fone: #FFF1F7;
@@ -13,7 +13,7 @@
   --text-shadow-color: #FF0070;
   --text-shadow-color-size: #FF8DCB;
   --bg-color-dekor: #FF8DCB;
-}
+} */
 
 .page.theme_light {
 /* сохраните этот селектор в приведённом виде.

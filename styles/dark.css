@@ -1,4 +1,4 @@
-:root.theme-dark {
+/* :root.theme-dark {
   --bg-image-header: url("../images/cover-image-dark.png");
   --main-bg-color: #000028;
   --main-bg-fone: #000028;
@@ -7,7 +7,7 @@
   --focus-color: #DB00FF;
   --text-shadow-color: #FF0070;
   --bg-color-dekor: #FF0070;
-}
+} */
 
 /*
   Специально для тёмной темы при наличии класса,
