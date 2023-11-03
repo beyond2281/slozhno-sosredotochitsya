@@ -25,7 +25,7 @@
       --text-shadow-color: #FF0070;
       --text-shadow-color-size: #FF8DCB;
       --bg-color-dekor: #FF8DCB; 
-    }
+  }
 
       .page {
         background-color: var(--main-bg-fone);
