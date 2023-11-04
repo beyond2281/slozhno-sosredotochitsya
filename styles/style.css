@@ -8,7 +8,6 @@
   background-size: cover;
   background-attachment: fixed;
   inline-size: 100%;
-  min-height: 688px;
 }
 
 .header {
@@ -21,30 +20,28 @@
   block-size: 100vh;
 }
 
-.decorated-zone::before {
+.decorated-zone::before,
+.decorated-zone::after {
   content: '';
   position: absolute;
-  top: 10px;
-  right: 10px;
   justify-self: flex-end;
   align-self: start;
-  border-inline-end: 1px solid  var(--accent-color, #FF0070);
-  border-block-start: 1px solid  var(--accent-color, #FF0070);
   inline-size: 25px;
   block-size: 25px;
 }
 
+.decorated-zone::before {
+  top: 10px;
+  right: 10px;
+  border-inline-end: 1px solid  var(--accent-color, #FF0070);
+  border-block-start: 1px solid  var(--accent-color, #FF0070);
+}
+
 .decorated-zone::after {
-  content: '';
-  position: absolute;
   bottom: 10px;
   left: 10px;
-  justify-self: flex-end;
-  align-self: start;
   border-inline-start: 1px solid  var( --accent-color, #FF0070);
   border-block-end: 1px solid  var( --accent-color, #FF0070);
-  inline-size: 25px;
-  block-size: 25px;
 }
 
 .header__decorative-element::after {
@@ -147,7 +144,6 @@
 
 .main__title {
   margin-block-start: 50px;
-  margin-block-end: 20px;
   color: var(--accent-color, #FF0070);
   font-family: 'IBM Plex mono', sans-serif;
   font-weight: var(--header-font-weight, 700);
@@ -156,8 +152,18 @@
   line-height: 23.4px;
 }
 
-.main__section-concentrate .main__title:first-child {
+.concentrate .main__title {
   margin-block-start: 40px;
+}
+
+.main__section {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 20px;
+}
+
+.concentrate-reasons .main__block-text:not(:last-child) {
+  margin-block-end: 20px;
 }
 
 .main {
@@ -212,7 +218,7 @@
   border-color: var(--main-text-color, #F1B2CE);
 }
 
-.block-title-font-normal {
+.block-title-recommendations {
   margin-block-start: 20px;
   margin-block-end: 10px;
   color: var(--main-bg-color, #000028);
@@ -223,14 +229,8 @@
   line-height: 23.4px;
 }
 
-.main__section-concentrate-reasons {
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
-}
-
 .main__section-foto {
-  padding: 50px 10px 40px 10px;
+  padding: 50px 0 40px;
 }
 
 .main__section-foto-list {
@@ -253,7 +253,6 @@
   align-items: center;
   padding: 10px;
   block-size: 100vh;
-  min-height: 688px;
 }
 
 .footer__text {
@@ -283,13 +282,8 @@
     left: 20px;
   }
 
-  .header__decorative-element::after {
-    left: 42px;
-  }
-
   .header__decorative-element {
     top: 20px;
-    right: 10px;
     margin-inline-end: 38px;
   }
 
@@ -311,34 +305,25 @@
   .main__title {
     max-width: 236px;
     margin: 0;
-    margin-block-end: 20px;
   }
 
-  .main__section-concentrate .main__title:first-child {
-    margin: 0;
-  }
-
-
-  .main__section-concentrate {
-    display: grid;
-    grid-template-columns: fit-content(236px) 1fr;
-    gap: 20px;
+  .concentrate,
+  .concentrate-adviсe {
+    grid-template-columns: auto 1fr;
     margin-block-start: 60px;
     margin-block-end: 80px;
   }
 
-  .main__section-concentrate-reasons {
-    margin-block-end: 80px;
+  .concentrate-reasons .main__block-text:last-child {
+    margin-block-end: 20px;
   }
 
-  .main__section-concentrate-adviсe {
-    display: grid;
-    grid-template-columns: fit-content(236px) 1fr;
-    gap: 20px;
+  .concentrate .main__title {
+    margin-block-start: 0;
   }
 
   .main__section-foto {
-    padding: 80px 20px 60px 20px;
+    padding: 0 0 60px;
   }
 
   .main__section-foto-list {
@@ -382,22 +367,18 @@
     font-size: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem);
     line-height: 99px;
   }
-  
 }
 
 @media (width >= 1024px) {
-
   .header {
     align-items: start;
   }
 
   .header__title {
-    font-size: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem);
     line-height: 129.525px;
   }
 
   .header__theme-menu-list {
-    display: flex;
     flex-direction: row;
     justify-content: center;
   }
@@ -411,13 +392,13 @@
     min-width: 314px;
   }
 
-  .main__section-concentrate-reasons {
+  .concentrate-reasons {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
   }
 
   .footer__text {
-    font-size: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem);
     line-height: 129.525px;
   }
 }
